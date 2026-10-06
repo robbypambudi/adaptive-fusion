@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.env
+
+# Data & hasil besar tidak di-commit
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+*.pt
+*.ckpt
