@@ -25,7 +25,13 @@ make test      # cek apakah semua berjalan normal (harus "passed")
 > Tidak punya GPU? Install PyTorch versi CPU dulu sebelum `make setup`:
 > `pip install torch --index-url https://download.pytorch.org/whl/cpu`
 
-### 2. Buka Claude Code
+### 2. Tulis ide riset kamu
+
+Buka **[`docs/ide.md`](docs/ide.md)** dan tulis ide kamu dengan bebas: ide metode, dataset, paper, atau pertanyaan. Tidak perlu rapi.
+
+Di Fase 0, AI akan membaca file ini dan membantu menyusunnya menjadi **piagam riset** (`docs/research-charter.md`) yang lebih terstruktur.
+
+### 3. Buka Claude Code
 
 ```bash
 claude
@@ -33,7 +39,7 @@ claude
 
 Setelah terbuka, AI otomatis membaca aturan proyek (`AGENTS.md`). Kamu tinggal mengetik perintah fase.
 
-### 3. Kerjakan fase satu per satu
+### 4. Kerjakan fase satu per satu
 
 Ketik perintah di bawah ini di dalam Claude Code, **berurutan**:
 
@@ -47,7 +53,7 @@ Ketik perintah di bawah ini di dalam Claude Code, **berurutan**:
 
 **Kapan pindah ke fase berikutnya?** Buka checklist fase itu di [`docs/phases/`](docs/phases/). Jika semua sudah dicentang dan tim setuju, lanjut ke fase berikutnya.
 
-### 4. Simpan pekerjaan dan minta review tim
+### 5. Simpan pekerjaan dan minta review tim
 
 Setiap selesai satu tugas:
 
@@ -88,6 +94,7 @@ Lalu buat **Pull Request** di GitHub. Tulis di deskripsinya bagian mana yang dib
 AGENTS.md, CLAUDE.md       aturan untuk AI (jangan dihapus)
 .claude/agents/            2 asisten AI: coder (menulis kode) & reviewer (memeriksa)
 .claude/skills/            perintah /fase-0 sampai /fase-4
+docs/ide.md                tempat menulis ide bebas
 docs/research-charter.md   piagam riset (diisi di Fase 0)
 docs/phases/               langkah & checklist tiap fase
 docs/eksperimen/           catatan tiap eksperimen (Fase 4)

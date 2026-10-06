@@ -4,7 +4,7 @@
 
 ## Langkah
 1. `make setup` lalu `make test` (harus lolos).
-2. Isi `docs/research-charter.md` bersama tim. AI boleh memberi usulan, tapi keputusan di tangan tim.
+2. Tulis ide bebas di `docs/ide.md`, lalu susun menjadi `docs/research-charter.md` bersama tim. AI boleh memberi usulan, tapi keputusan di tangan tim.
 3. Bagi tugas anggota tim (tabel "Tim" di charter).
 
 ## Checklist selesai
