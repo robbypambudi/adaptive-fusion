@@ -25,3 +25,6 @@ def seed_everything(seed: int, deterministic: bool = True) -> None:
         os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
         torch.use_deterministic_algorithms(True, warn_only=True)
         torch.backends.cudnn.benchmark = False
+        # Backward flash/mem-efficient attention di CUDA tidak deterministik; pakai kernel math.
+        torch.backends.cuda.enable_flash_sdp(False)
+        torch.backends.cuda.enable_mem_efficient_sdp(False)

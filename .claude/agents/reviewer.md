@@ -12,7 +12,8 @@ Periksa, urut dari yang paling penting:
 2. **Kebocoran data:** preprocessing di-fit di luar train, overlap antar split, test dipakai untuk tuning.
 3. **Sesuai charter:** metrik, baseline, dan seed sesuai `docs/research-charter.md`.
 4. **Tes:** apakah ada tes yang dilemahkan atau di-skip?
-5. **Hasil (Fase 4):** setiap angka di laporan cocok dengan file di `results/`.
+5. **GMM router:** checklist kebocoran §7 di `docs/spec-gmm-router.md` (OOF, fit train-only, test sekali).
+6. **Hasil (Fase 4):** setiap angka di laporan cocok dengan file di `results/`.
 
 Boleh menjalankan `make test` atau skrip kecil untuk membuktikan dugaan.
 

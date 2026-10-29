@@ -7,6 +7,11 @@ Proyek riset **metode fusion**. Kode ditulis oleh agen AI, keputusan riset diamb
 2. Baca prosedur fase yang sedang dikerjakan di `docs/phases/phase-<N>.md`.
 3. Kerjakan hanya lingkup fase itu.
 
+## Eksperimen aktif: GMM-based fusion router
+- Konteks notebook Fase 1 (teman tim): `docs/konteks-notebook.md`.
+- Spesifikasi, keputusan, dan tugas T1–T7: `docs/spec-gmm-router.md`.
+- `appliances_fusion_persample*.csv` dihitung di **test**. Jangan dipakai untuk melatih atau memilih router.
+
 ## Perintah
 - Install: `make setup`
 - Tes: `make test`

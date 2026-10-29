@@ -1,0 +1,34 @@
+{
+  "files": {
+    "confidences": {
+      "path": "data/processed/appliances_zip1000/84e993a3aaf3/router/seed42/confidences.npz",
+      "sha256": "7d88061dcaf0dbb2909fca1c7d6920212e82ebb241123766e52970c8dfcecf9f"
+    }
+  },
+  "identity": {
+    "config_sha256": "43e68145fd3514d07dcd70b6f85839e81300702c4c4011d53dceb851d5f4e95e",
+    "dataset_id": "appliances_zip1000",
+    "run_id": "84e993a3aaf3",
+    "seed": 42,
+    "source_fingerprint": "6abbcb93e71a4ef68392a5437cf031adf179751182fa2936c12a2a442d63def1",
+    "split_sha256": "1a893e046cee4d29f2d73be97eb297e482010349b8af1b9837cf56d665e36eff",
+    "stage": "oof",
+    "upstream": {
+      "full": "511971ddfac2"
+    }
+  },
+  "inputs": {
+    "checkpoint_concat": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/concat_seed42.pt",
+      "sha256": "e32c7880f4bc5525fb5b08b0ec3b7b76ef0fa14264ef3d52e058afc43324a833"
+    },
+    "checkpoint_cross_attn": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/cross_attn_seed42.pt",
+      "sha256": "0ba0cec7f8abea77b577203e174f81f6f5996fe6cda9cf8c190f5418422785ef"
+    },
+    "checkpoint_mean": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/mean_seed42.pt",
+      "sha256": "d764af6472bde77b1f46d0d92911fb9baefbd6c0796dc26f93ad66907f4f8659"
+    }
+  }
+}

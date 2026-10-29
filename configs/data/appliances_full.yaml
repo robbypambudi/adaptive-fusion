@@ -1,0 +1,16 @@
+# Dataset penuh: SEMUA review Appliances yang punya gambar (84.949 baris), dibangun ulang dengan
+# scripts/build_full_features.py (DINOv2-base + BGE-base-en-v1.5, sama dengan notebook).
+# Sampel valid = baris yang gambarnya berhasil diunduh & di-encode.
+dataset_id: appliances_full
+raw_dir: data/raw/amazon_review_2023_full
+processed_dir: data/processed
+subset_csv: appliances.csv
+embeddings:
+  image: appliances_image_emb.npy
+  title: appliances_title_emb.npy
+  text: appliances_text_emb.npy
+label_min_rating: 4.0
+split:
+  seed: 42
+  test_size: 0.2
+  val_size: 0.2

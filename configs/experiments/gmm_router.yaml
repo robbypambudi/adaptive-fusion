@@ -1,0 +1,52 @@
+# EXP-001 + EXP-002: Global Fusion vs Dynamic Fusion (GMM + MLP router).
+# Spesifikasi: docs/spec-gmm-router.md; keputusan: docs/keputusan-gmm-router.md.
+data_config: configs/data/appliances_zip1000.yaml
+methods: [mean, concat, cross_attn]    # urutan = tie-break label router (D3)
+seeds: [42, 43, 44]                    # Q5
+device: auto                           # auto | cpu | cuda
+
+paths:
+  processed: data/processed
+  results: results
+  checkpoints: checkpoints
+
+# Arsitektur & training fusion = notebook (Q3: EPOCHS = PATIENCE = 300).
+training:
+  d_branch: 512
+  d_fusion: 512
+  hidden: 256
+  dropout: 0.2
+  n_heads: 4
+  batch_size: 128
+  epochs: 300
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 300
+
+oof:
+  n_folds: 5
+  inner_val_size: 0.2      # inner-val per fold untuk seleksi checkpoint (spec §5)
+
+gmm:
+  pca_dims: [16, 32, 64]
+  n_components: [2, 3, 4, 5, 6, 8, 10]
+  covariance_types: [diag, full]
+  full_max_pca_dim: 32     # kovarians penuh hanya untuk PCA <= 32
+  n_init: 1
+  max_iter: 200
+  reg_covar: 1.0e-6
+
+router:
+  hidden: [16, 32]
+  class_weight: [none, balanced]
+  dropout: 0.1
+  lr: 0.01
+  weight_decay: 0.0001
+  max_epochs: 200
+  patience: 20
+
+permutation:
+  n_permutations: 20
+
+evaluation:
+  random_router_stream: 7  # stream RNG baseline router acak di T7

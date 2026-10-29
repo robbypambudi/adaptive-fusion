@@ -85,6 +85,14 @@ Lalu buat **Pull Request** di GitHub. Tulis di deskripsinya bagian mana yang dib
 | `make setup` | Install semua kebutuhan |
 | `make test` | Jalankan semua tes |
 | `make lint` | Cek kerapian kode |
+| `make data` | Ekstrak artefak notebook (`datasets/amazon_review_2023-*.zip`) ke `data/raw/` dan buat split |
+| `make router-dev` | GMM router tahap T3–T6 (train/val saja) untuk semua seed |
+| `make router-test` | GMM router T7 + rekap. **Menyentuh test set**; jalankan sekali setelah kode lolos inspeksi |
+| `make data-full` | Dataset penuh: semua 84.949 review Appliances bergambar → unduh gambar + encode DINOv2/BGE (butuh GPU, internet, `pip install -e ".[features]"`) |
+| `make router-dev-full` / `make router-test-full` | Sama seperti di atas, untuk dataset penuh |
+
+GPU NVIDIA seri RTX 50 butuh PyTorch CUDA 12.8:
+`pip install torch --index-url https://download.pytorch.org/whl/cu128` sebelum `make setup`.
 
 ---
 
@@ -98,6 +106,8 @@ docs/ide.md                tempat menulis ide bebas
 docs/research-charter.md   piagam riset (diisi di Fase 0)
 docs/phases/               langkah & checklist tiap fase
 docs/eksperimen/           catatan tiap eksperimen (Fase 4)
+docs/konteks-notebook.md   ringkasan notebook Fase 1 (data, 3 fusion, analisis per-sampel)
+docs/spec-gmm-router.md    spesifikasi GMM router + tugas T1–T7 (/gmm-router T<n>)
 docs/SOURCES.md            sumber rujukan template ini
 configs/                   pengaturan data & eksperimen
 data/raw/                  data asli (jangan diubah, tidak masuk git)

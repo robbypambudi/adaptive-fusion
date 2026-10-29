@@ -1,0 +1,47 @@
+{
+  "files": {
+    "featurizer": {
+      "path": "data/processed/appliances_zip1000/ac471a326ab1/router_model/seed44/featurizer.pkl",
+      "sha256": "cb392731aebe436fa6a34d73a76a414c503d879c65703beaa94e5e42d2ee277c"
+    },
+    "router": {
+      "path": "data/processed/appliances_zip1000/ac471a326ab1/router_model/seed44/router.pt",
+      "sha256": "9164fb2ea50e233aee149001b76c0fcdc7114b20b0176cbe70625e47a2f3d574"
+    },
+    "selection": {
+      "path": "results/appliances_zip1000/ac471a326ab1/router_selection/seed44.json",
+      "sha256": "5353154bf094815569e4b061d5d3a5bf04501104de4d30cda84d3eafd0d72c42"
+    }
+  },
+  "identity": {
+    "config_sha256": "e16e8b1afdfbcda1105b8e81b2ea7a5085daf935cf8ae12089f81e7f4f781bf4",
+    "dataset_id": "appliances_zip1000",
+    "run_id": "ac471a326ab1",
+    "seed": 44,
+    "source_fingerprint": "6abbcb93e71a4ef68392a5437cf031adf179751182fa2936c12a2a442d63def1",
+    "split_sha256": "1a893e046cee4d29f2d73be97eb297e482010349b8af1b9837cf56d665e36eff",
+    "stage": "select",
+    "upstream": {
+      "full": "2407e4f833ab",
+      "oof": "e30d4c59bf03"
+    }
+  },
+  "inputs": {
+    "checkpoint_concat": {
+      "path": "checkpoints/appliances_zip1000/2407e4f833ab/full/concat_seed44.pt",
+      "sha256": "bb3584c19db96d1f42242086f43c823c10fec48f78e59cb9060b4a0ed7e58f1c"
+    },
+    "checkpoint_cross_attn": {
+      "path": "checkpoints/appliances_zip1000/2407e4f833ab/full/cross_attn_seed44.pt",
+      "sha256": "b4dcdffaa7b22628185e041e2f7c992e3fff0fb15cf79acc98b73acf549a7970"
+    },
+    "checkpoint_mean": {
+      "path": "checkpoints/appliances_zip1000/2407e4f833ab/full/mean_seed44.pt",
+      "sha256": "f14e45b3e616a60f67c977274c27df8286aa1d4ab81057e913ab4e590cad0190"
+    },
+    "confidences": {
+      "path": "data/processed/appliances_zip1000/e30d4c59bf03/router/seed44/confidences.npz",
+      "sha256": "1360cdf54025af560ed8fba327663ec431c0000afbb9eec4cba797a678e43e29"
+    }
+  }
+}

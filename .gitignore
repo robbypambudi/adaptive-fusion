@@ -5,11 +5,19 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .ipynb_checkpoints/
+# File kunci run (permanen, lihat _run_lock)
+results/**/.*.lock
+# CSV per-sampel notebook dihitung di TEST; jangan di-commit
+/appliances_fusion_persample*.csv
 .env
 
 # Data & hasil besar tidak di-commit
 data/raw/*
 data/processed/*
+datasets/
+checkpoints/
+# CSV per-sampel notebook dihitung di TEST; jangan di-commit
+/appliances_fusion_persample*.csv
 !data/**/.gitkeep
 *.pt
 *.ckpt

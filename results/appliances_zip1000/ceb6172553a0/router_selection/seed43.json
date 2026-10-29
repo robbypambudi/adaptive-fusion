@@ -1,0 +1,2644 @@
+{
+  "candidates": [
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.717948717948718,
+      "val_routing_counts": [
+        58,
+        20,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7307692307692307,
+      "val_routing_counts": [
+        57,
+        0,
+        21
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.6923076923076923,
+      "val_routing_counts": [
+        52,
+        0,
+        26
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.7692307692307693,
+      "val_routing_counts": [
+        63,
+        0,
+        15
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6794871794871795,
+      "val_routing_counts": [
+        54,
+        0,
+        24
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.7307692307692307,
+      "val_routing_counts": [
+        58,
+        0,
+        20
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.48717948717948717,
+      "val_routing_counts": [
+        34,
+        14,
+        30
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6410256410256411,
+      "val_routing_counts": [
+        51,
+        0,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.46153846153846156,
+      "val_routing_counts": [
+        32,
+        13,
+        33
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6410256410256411,
+      "val_routing_counts": [
+        51,
+        0,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6153846153846154,
+      "val_routing_counts": [
+        49,
+        0,
+        29
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8717948717948718,
+      "val_routing_counts": [
+        75,
+        3,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6538461538461539,
+      "val_routing_counts": [
+        54,
+        0,
+        24
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.3717948717948718,
+      "val_routing_counts": [
+        26,
+        22,
+        30
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.5512820512820513,
+      "val_routing_counts": [
+        46,
+        0,
+        32
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.44871794871794873,
+      "val_routing_counts": [
+        32,
+        17,
+        29
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.10256410256410256,
+      "val_routing_counts": [
+        3,
+        42,
+        33
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.46153846153846156,
+      "val_routing_counts": [
+        35,
+        23,
+        20
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.46153846153846156,
+      "val_routing_counts": [
+        33,
+        25,
+        20
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.7307692307692307,
+      "val_routing_counts": [
+        64,
+        0,
+        14
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.28205128205128205,
+      "val_routing_counts": [
+        20,
+        32,
+        26
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.47435897435897434,
+      "val_routing_counts": [
+        36,
+        15,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6153846153846154,
+      "val_routing_counts": [
+        51,
+        0,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8076923076923077,
+      "val_routing_counts": [
+        69,
+        9,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.41025641025641024,
+      "val_routing_counts": [
+        29,
+        23,
+        26
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8589743589743589,
+      "val_routing_counts": [
+        74,
+        0,
+        4
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.44871794871794873,
+      "val_routing_counts": [
+        34,
+        20,
+        24
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 16
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.46153846153846156,
+      "val_routing_counts": [
+        35,
+        19,
+        24
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7948717948717948,
+      "val_routing_counts": [
+        64,
+        0,
+        14
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7692307692307693,
+      "val_routing_counts": [
+        60,
+        0,
+        18
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7948717948717948,
+      "val_routing_counts": [
+        64,
+        0,
+        14
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7564102564102564,
+      "val_routing_counts": [
+        57,
+        0,
+        21
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.8461538461538461,
+      "val_routing_counts": [
+        71,
+        0,
+        7
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7307692307692307,
+      "val_routing_counts": [
+        53,
+        1,
+        24
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.5256410256410257,
+      "val_routing_counts": [
+        39,
+        0,
+        39
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.19230769230769232,
+      "val_routing_counts": [
+        13,
+        27,
+        38
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8717948717948718,
+      "val_routing_counts": [
+        74,
+        0,
+        4
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.10256410256410256,
+      "val_routing_counts": [
+        4,
+        37,
+        37
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8717948717948718,
+      "val_routing_counts": [
+        74,
+        0,
+        4
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.5256410256410257,
+      "val_routing_counts": [
+        39,
+        12,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8717948717948718,
+      "val_routing_counts": [
+        75,
+        0,
+        3
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.5512820512820513,
+      "val_routing_counts": [
+        44,
+        14,
+        20
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8717948717948718,
+      "val_routing_counts": [
+        75,
+        0,
+        3
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.23076923076923078,
+      "val_routing_counts": [
+        14,
+        28,
+        36
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8076923076923077,
+      "val_routing_counts": [
+        68,
+        0,
+        10
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7948717948717948,
+      "val_routing_counts": [
+        65,
+        0,
+        13
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.44871794871794873,
+      "val_routing_counts": [
+        33,
+        16,
+        29
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7692307692307693,
+      "val_routing_counts": [
+        63,
+        0,
+        15
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.4230769230769231,
+      "val_routing_counts": [
+        29,
+        18,
+        31
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7564102564102564,
+      "val_routing_counts": [
+        59,
+        0,
+        19
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.717948717948718,
+      "val_routing_counts": [
+        56,
+        0,
+        22
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 2,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7564102564102564,
+      "val_routing_counts": [
+        62,
+        16,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 3,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.19230769230769232,
+      "val_routing_counts": [
+        16,
+        30,
+        32
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8076923076923077,
+      "val_routing_counts": [
+        69,
+        0,
+        9
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.7948717948717948,
+      "val_routing_counts": [
+        68,
+        0,
+        10
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8076923076923077,
+      "val_routing_counts": [
+        69,
+        0,
+        9
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 4,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.48717948717948717,
+      "val_routing_counts": [
+        36,
+        0,
+        42
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8333333333333334,
+      "val_routing_counts": [
+        72,
+        0,
+        6
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6794871794871795,
+      "val_routing_counts": [
+        55,
+        17,
+        6
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8333333333333334,
+      "val_routing_counts": [
+        72,
+        0,
+        6
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 5,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.6794871794871795,
+      "val_routing_counts": [
+        55,
+        17,
+        6
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8974358974358975,
+      "val_routing_counts": [
+        77,
+        0,
+        1
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7564102564102564,
+      "val_routing_counts": [
+        61,
+        17,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8974358974358975,
+      "val_routing_counts": [
+        77,
+        0,
+        1
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 6,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.24358974358974358,
+      "val_routing_counts": [
+        17,
+        24,
+        37
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 8,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.07692307692307693,
+      "val_routing_counts": [
+        0,
+        1,
+        77
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.21794871794871795,
+      "val_routing_counts": [
+        15,
+        0,
+        63
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "full",
+        "n_components": 10,
+        "pca_dim": 32
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.19230769230769232,
+      "val_routing_counts": [
+        13,
+        0,
+        65
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.8333333333333334,
+      "val_routing_counts": [
+        68,
+        0,
+        10
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.8333333333333334,
+      "val_routing_counts": [
+        70,
+        0,
+        8
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 2,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.7948717948717948,
+      "val_routing_counts": [
+        65,
+        3,
+        10
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.5256410256410257,
+      "val_routing_counts": [
+        43,
+        24,
+        11
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 3,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.6666666666666666,
+      "val_routing_counts": [
+        56,
+        11,
+        11
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8461538461538461,
+      "val_routing_counts": [
+        73,
+        0,
+        5
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8589743589743589,
+      "val_routing_counts": [
+        74,
+        0,
+        4
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 4,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.5,
+      "val_routing_counts": [
+        39,
+        22,
+        17
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.6410256410256411,
+      "val_routing_counts": [
+        51,
+        9,
+        18
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.8205128205128205,
+      "val_routing_counts": [
+        68,
+        0,
+        10
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 5,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.44871794871794873,
+      "val_routing_counts": [
+        34,
+        25,
+        19
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.5512820512820513,
+      "val_routing_counts": [
+        44,
+        16,
+        18
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 6,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9743589743589743,
+      "val_router_acc": 0.6410256410256411,
+      "val_routing_counts": [
+        50,
+        9,
+        19
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8461538461538461,
+      "val_routing_counts": [
+        73,
+        0,
+        5
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8589743589743589,
+      "val_routing_counts": [
+        74,
+        0,
+        4
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 8,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.9102564102564102,
+      "val_routing_counts": [
+        78,
+        0,
+        0
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8846153846153846,
+      "val_routing_counts": [
+        76,
+        0,
+        2
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 16
+      },
+      "val_dynamic_acc": 0.9487179487179487,
+      "val_router_acc": 0.4358974358974359,
+      "val_routing_counts": [
+        37,
+        14,
+        27
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "none",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9615384615384616,
+      "val_router_acc": 0.8846153846153846,
+      "val_routing_counts": [
+        76,
+        0,
+        2
+      ]
+    },
+    {
+      "gmm": {
+        "covariance_type": "diag",
+        "n_components": 10,
+        "pca_dim": 64
+      },
+      "router": {
+        "class_weight": "balanced",
+        "hidden": 32
+      },
+      "val_dynamic_acc": 0.9487179487179487,
+      "val_router_acc": 0.4358974358974359,
+      "val_routing_counts": [
+        37,
+        14,
+        27
+      ]
+    }
+  ],
+  "dataset_id": "appliances_zip1000",
+  "permutation": {
+    "dynamic_acc": {
+      "exceeds_p95": false,
+      "n_permutations": 20,
+      "null_mean": 0.9743589743589742,
+      "null_p95": 0.9743589743589743,
+      "null_scores": [
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743,
+        0.9743589743589743
+      ],
+      "observed": 0.9743589743589743,
+      "p_value": 1.0
+    },
+    "note": "Setiap permutasi mengulang seluruh seleksi (GMM-006). Diagnostik, bukan tes lulus.",
+    "router_acc": {
+      "exceeds_p95": false,
+      "n_permutations": 20,
+      "null_mean": 0.6153846153846154,
+      "null_p95": 0.8076923076923077,
+      "null_scores": [
+        0.7948717948717948,
+        0.5,
+        0.7948717948717948,
+        0.717948717948718,
+        0.6153846153846154,
+        0.5,
+        0.8076923076923077,
+        0.07692307692307693,
+        0.5,
+        0.782051282051282,
+        0.7948717948717948,
+        0.8076923076923077,
+        0.7948717948717948,
+        0.782051282051282,
+        0.7948717948717948,
+        0.05128205128205128,
+        0.8076923076923077,
+        0.5,
+        0.7948717948717948,
+        0.08974358974358974
+      ],
+      "observed": 0.7948717948717948,
+      "p_value": 0.47619047619047616
+    }
+  },
+  "router_label_counts": {
+    "train_oof": [
+      157,
+      48,
+      104
+    ],
+    "val": [
+      71,
+      1,
+      6
+    ]
+  },
+  "run_id": "ceb6172553a0",
+  "seed": 43,
+  "selected": {
+    "gmm": {
+      "covariance_type": "diag",
+      "n_components": 2,
+      "pca_dim": 32
+    },
+    "router": {
+      "class_weight": "none",
+      "dropout": 0.1,
+      "hidden": 16,
+      "lr": 0.01,
+      "max_epochs": 200,
+      "patience": 20,
+      "weight_decay": 0.0001
+    },
+    "rule": "max val_dynamic_acc; seri -> K terkecil -> urutan grid"
+  },
+  "upstream": {
+    "full": "62614b057592",
+    "oof": "b20af4933eff"
+  },
+  "val": {
+    "dynamic_acc": 0.9743589743589743,
+    "global_acc": {
+      "concat": 0.9615384615384616,
+      "cross_attn": 0.9743589743589743,
+      "mean": 0.9615384615384616
+    },
+    "majority_router": {
+      "dynamic_acc": 0.9615384615384616,
+      "method": "mean",
+      "router_acc": 0.9102564102564102
+    },
+    "n": 78,
+    "router_acc": 0.7948717948717948,
+    "router_acc_independent_expectation": 0.7606837606837606,
+    "routing_counts": {
+      "concat": 0,
+      "cross_attn": 14,
+      "mean": 64
+    }
+  }
+}

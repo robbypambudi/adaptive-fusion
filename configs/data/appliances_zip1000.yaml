@@ -1,0 +1,20 @@
+# Run zip notebook Fase 1: subset 1000 review Appliances → 484 sampel valid.
+# Sumber: datasets/amazon_review_2023-*.zip (diekstrak apa adanya ke raw_dir, lihat `make data`).
+dataset_id: appliances_zip1000
+raw_dir: data/raw/amazon_review_2023
+processed_dir: data/processed
+subset_csv: appliances.csv
+embeddings:
+  image: appliances_image_emb.npy
+  title: appliances_title_emb.npy
+  text: appliances_text_emb.npy
+label_min_rating: 4.0          # rating >= 4 → 1 (positif), selain itu 0
+split:
+  seed: 42                     # Q2: split tetap untuk semua seed
+  test_size: 0.2
+  val_size: 0.2
+# Hanya untuk cek identitas sampel (subset_idx) dan pembanding kewajaran; dihitung di TEST,
+# tidak pernah dipakai untuk training/seleksi.
+notebook_persample_csv: appliances_fusion_persample.csv
+notebook_reference:
+  best_val_loss: {mean: 0.0634, concat: 0.0604, cross_attn: 0.0409}

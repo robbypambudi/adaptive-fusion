@@ -1,0 +1,39 @@
+{
+  "files": {
+    "checkpoint_concat": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/concat_seed42.pt",
+      "sha256": "e32c7880f4bc5525fb5b08b0ec3b7b76ef0fa14264ef3d52e058afc43324a833"
+    },
+    "checkpoint_cross_attn": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/cross_attn_seed42.pt",
+      "sha256": "0ba0cec7f8abea77b577203e174f81f6f5996fe6cda9cf8c190f5418422785ef"
+    },
+    "checkpoint_mean": {
+      "path": "checkpoints/appliances_zip1000/511971ddfac2/full/mean_seed42.pt",
+      "sha256": "d764af6472bde77b1f46d0d92911fb9baefbd6c0796dc26f93ad66907f4f8659"
+    },
+    "val_concat": {
+      "path": "results/appliances_zip1000/511971ddfac2/full_val/concat_seed42.json",
+      "sha256": "43a53380df786ed60528c1491c521ae02b9a60c682ad42b8f7489b99a486cb35"
+    },
+    "val_cross_attn": {
+      "path": "results/appliances_zip1000/511971ddfac2/full_val/cross_attn_seed42.json",
+      "sha256": "158c97d5f3a1da25320c6e13a3fb44b45b9c724f64a4edae297a842c6eab0d4a"
+    },
+    "val_mean": {
+      "path": "results/appliances_zip1000/511971ddfac2/full_val/mean_seed42.json",
+      "sha256": "9f207c713e9beb687b1ec274687ef12ce24b7954ec2f295deacc6a4e89d3e9e5"
+    }
+  },
+  "identity": {
+    "config_sha256": "91d67be9e35f74c272f169bc45f7669f52c28475a3a6659054a8986ce17d2bbd",
+    "dataset_id": "appliances_zip1000",
+    "run_id": "511971ddfac2",
+    "seed": 42,
+    "source_fingerprint": "6abbcb93e71a4ef68392a5437cf031adf179751182fa2936c12a2a442d63def1",
+    "split_sha256": "1a893e046cee4d29f2d73be97eb297e482010349b8af1b9837cf56d665e36eff",
+    "stage": "full",
+    "upstream": {}
+  },
+  "inputs": {}
+}

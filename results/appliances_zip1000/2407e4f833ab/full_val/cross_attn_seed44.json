@@ -1,0 +1,21 @@
+{
+  "best_epoch": 7,
+  "best_val_loss": 0.07686466723680496,
+  "dataset_id": "appliances_zip1000",
+  "epochs_run": 300,
+  "method": "cross_attn",
+  "n_optimizer": 309,
+  "n_selection": 78,
+  "notebook_reference_best_val_loss": 0.0409,
+  "run_id": "2407e4f833ab",
+  "seed": 44,
+  "val": {
+    "accuracy": 0.9487179487179487,
+    "f1": 0.967741935483871,
+    "n": 78,
+    "n_correct": 74,
+    "precision": 0.967741935483871,
+    "recall": 0.967741935483871,
+    "roc_auc": 0.9939516129032258
+  }
+}

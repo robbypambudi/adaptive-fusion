@@ -1,0 +1,21 @@
+{
+  "best_epoch": 1,
+  "best_val_loss": 0.14961770176887512,
+  "dataset_id": "appliances_full",
+  "epochs_run": 300,
+  "method": "mean",
+  "n_optimizer": 54039,
+  "n_selection": 13510,
+  "notebook_reference_best_val_loss": null,
+  "run_id": "bdfcb517910c",
+  "seed": 44,
+  "val": {
+    "accuracy": 0.9417468541820874,
+    "f1": 0.9532799050163253,
+    "n": 13510,
+    "n_correct": 12723,
+    "precision": 0.9620177330457704,
+    "recall": 0.9446993763972232,
+    "roc_auc": 0.9851555898120734
+  }
+}
