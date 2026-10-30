@@ -14,6 +14,7 @@ from datetime import date
 from pathlib import Path
 
 import matplotlib
+import numpy as np
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
@@ -33,6 +34,7 @@ from reportlab.platypus import (  # noqa: E402
 
 from adaptive_fusion.experiments.gmm_router import (  # noqa: E402
     _load_upstream,
+    _same_checkpoints,
     build_context,
     load_run,
 )
@@ -48,30 +50,52 @@ def load_results(ctx, seeds, select_runs=None):
     """Tanpa ``select_runs``: cari run dari identitas kode/config saat ini. Dengan ``select_runs``:
     muat run select eksplisit + run full upstream-nya dan verifikasi hash (REV-004)."""
     if select_runs:
-        pairs = []
+        runs = []
         for rid in select_runs:
             select = load_run(ctx, "select", rid)
-            pairs.append((select, load_run(ctx, "full", select["identity"]["upstream"]["full"])))
+            upstream = select["identity"]["upstream"]
+            runs.append(
+                {
+                    "select": select,
+                    "oof": load_run(ctx, "oof", upstream["oof"]),
+                    "full": load_run(ctx, "full", upstream["full"]),
+                }
+            )
     else:
-        pairs = [(_load_upstream(ctx, "select", s), _load_upstream(ctx, "full", s)) for s in seeds]
+        runs = [{st: _load_upstream(ctx, st, s) for st in ("select", "oof", "full")} for s in seeds]
     # REV-006: satu baris per seed, dan semua run harus berasal dari protokol yang sama
-    # (config_sha256 tahap select & full mencakup config, kode, dan environment produsen).
-    seeds_seen = [s["identity"]["seed"] for s, _ in pairs]
+    # (config_sha256 tiap tahap mencakup config, kode, dan environment produsen; tahap oof
+    # membawa n_folds/inner_val_size yang tidak tercakup hash select & full).
+    seeds_seen = [r["select"]["identity"]["seed"] for r in runs]
     if len(set(seeds_seen)) != len(seeds_seen):
         raise ValueError(f"seed ganda dalam laporan: {seeds_seen}")
-    for stage, idx in (("select", 0), ("full", 1)):
-        shas = {pair[idx]["identity"]["config_sha256"] for pair in pairs}
+    for stage in ("select", "oof", "full"):
+        shas = {r[stage]["identity"]["config_sha256"] for r in runs}
         if len(shas) != 1:
             raise ValueError(f"run '{stage}' berasal dari protokol berbeda: {sorted(shas)}")
+    for r in runs:
+        if r["oof"]["identity"]["upstream"]["full"] != r["full"]["identity"]["run_id"]:
+            raise ValueError(f"run oof {r['oof']['identity']['run_id']} bukan turunan run full")
+        # Garis keturunan juga lewat hash isi, bukan hanya run_id di manifest.
+        used = r["select"]["inputs"]["confidences"]["sha256"]
+        if used != r["oof"]["files"]["confidences"]["sha256"]:
+            raise ValueError(f"run select {r['select']['identity']['run_id']}: confidences beda")
+        _same_checkpoints(r["select"], r["full"], METHODS)
     rows = []
-    for select, full in pairs:
+    for r in runs:
+        select, full = r["select"], r["full"]
         seed = select["identity"]["seed"]
         sel = json.loads(manifest_path(select, "files", "selection", ctx.base).read_text())
         val_files = {
             m: json.loads(manifest_path(full, "files", f"val_{m}", ctx.base).read_text())
             for m in METHODS
         }
-        rows.append({"seed": seed, "select": sel, "full": val_files, "manifest": select})
+        # Jumlah fold dari keluaran produsen OOF, bukan dari config pembaca.
+        with np.load(manifest_path(r["oof"], "files", "confidences", ctx.base)) as conf:
+            n_folds = int(conf["fold_of"].max()) + 1
+        rows.append(
+            {"seed": seed, "select": sel, "full": val_files, "manifest": select, "n_folds": n_folds}
+        )
     return rows
 
 
@@ -199,12 +223,15 @@ def fig_router_labels(rows, path):
 
 
 def fig_permutation(rows, n_val, path):
-    """Per seed: skor label asli (atas) vs 20 skor label diacak setelah seleksi (bawah)."""
+    """Per seed: skor label asli (atas) vs skor label diacak setelah seleksi (bawah)."""
     fig, ax = plt.subplots(figsize=(7.2, 2.9), dpi=200)
     for i, r in enumerate(rows):
         perm = r["select"]["permutation"]["dynamic_acc"]
         y = len(rows) - 1 - i
         null = perm["null_scores"]
+        n_perm = perm["n_permutations"]
+        if len(null) != n_perm:
+            raise ValueError(f"seed {r['seed']}: {len(null)} skor null, diharapkan {n_perm}")
         jitter = [((k % 5) - 2) * 0.035 for k in range(len(null))]
         ax.scatter(
             null,
@@ -213,7 +240,7 @@ def fig_permutation(rows, n_val, path):
             color=MUTED,
             alpha=0.55,
             zorder=2,
-            label="label diacak (20x, seleksi diulang)" if i == 0 else None,
+            label=f"label diacak ({n_perm}x, seleksi diulang)" if i == 0 else None,
         )
         ax.scatter(
             [perm["observed"]],
@@ -280,12 +307,14 @@ def build_pdf(ctx, rows, figs, out_pdf):
     # Dari hasil tersimpan (produsen), bukan dari config pembaca (REV-006).
     n_candidates = len(rows[0]["select"]["candidates"])
     n_perm = rows[0]["select"]["permutation"]["dynamic_acc"]["n_permutations"]
+    n_folds = rows[0]["n_folds"]
     if any(
         len(r["select"]["candidates"]) != n_candidates
         or r["select"]["permutation"]["dynamic_acc"]["n_permutations"] != n_perm
+        or r["n_folds"] != n_folds
         for r in rows
     ):
-        raise ValueError("jumlah kandidat/permutasi berbeda antar seed")
+        raise ValueError("jumlah kandidat/permutasi/fold berbeda antar seed")
 
     def mean_of(fn):
         vals = [fn(r) for r in rows]
@@ -382,7 +411,8 @@ def build_pdf(ctx, rows, figs, out_pdf):
             "1. Tiga model fusion (mean, concat, cross_attn) dilatih di train "
             f"({n_train:,} sampel), checkpoint dipilih di validasi.<br/>"
             "2. Label router = metode dengan probabilitas kelas benar tertinggi, dihitung dari "
-            "prediksi 5-fold di train (model tidak pernah melihat sampel yang ia beri label).<br/>"
+            f"prediksi {n_folds}-fold di train (model tidak pernah melihat sampel yang ia beri "
+            "label).<br/>"
             "3. GMM pada embedding gambar + judul + teks (standarisasi &rarr; PCA &rarr; GMM, "
             "fit di train) memberi probabilitas cluster per sampel.<br/>"
             "4. MLP router: probabilitas cluster &rarr; metode fusion. K, PCA, kovarians, dan "

@@ -1,0 +1,47 @@
+{
+  "files": {
+    "featurizer": {
+      "path": "data/processed/appliances_full/4704ebc9a41f/router_model/seed44/featurizer.pkl",
+      "sha256": "76d57e78d3ded3204a8d6040ccc1dcfe78410e087fd14825e29106bb281c0a19"
+    },
+    "router": {
+      "path": "data/processed/appliances_full/4704ebc9a41f/router_model/seed44/router.pt",
+      "sha256": "cb3c60aafe4af20124fc306e9d282df8e40e986072b2540bac43800c84df27a1"
+    },
+    "selection": {
+      "path": "results/appliances_full/4704ebc9a41f/router_selection/seed44.json",
+      "sha256": "05977e4f54bab0f72209434b52a007fcb51d0fdc3f425e9dc1e3347ade6e64f3"
+    }
+  },
+  "identity": {
+    "config_sha256": "e16e8b1afdfbcda1105b8e81b2ea7a5085daf935cf8ae12089f81e7f4f781bf4",
+    "dataset_id": "appliances_full",
+    "run_id": "4704ebc9a41f",
+    "seed": 44,
+    "source_fingerprint": "680b29228925a9b998202454a0f7d92c776eb8dbb55d6707a64745e41d1f630c",
+    "split_sha256": "73d9276b049cc62af67a19330fbba9cf6b6331740351a1bf1034377e35d743b9",
+    "stage": "select",
+    "upstream": {
+      "full": "bdfcb517910c",
+      "oof": "45007a2c3290"
+    }
+  },
+  "inputs": {
+    "checkpoint_concat": {
+      "path": "checkpoints/appliances_full/bdfcb517910c/full/concat_seed44.pt",
+      "sha256": "780d1900d9952708d2e8bea60d945fee028098117d88a6faace52cb3e1730e3f"
+    },
+    "checkpoint_cross_attn": {
+      "path": "checkpoints/appliances_full/bdfcb517910c/full/cross_attn_seed44.pt",
+      "sha256": "27b8885204f39c1b1e1e3bc87ffb69ac4ce94730f773d857088cbee15216c444"
+    },
+    "checkpoint_mean": {
+      "path": "checkpoints/appliances_full/bdfcb517910c/full/mean_seed44.pt",
+      "sha256": "ba95ee5faf92f0aff04567600e6702ca1605a57091d3e51ea4650f891bf1a516"
+    },
+    "confidences": {
+      "path": "data/processed/appliances_full/45007a2c3290/router/seed44/confidences.npz",
+      "sha256": "89e4073574f6c359c93218142498849a69a70128d1ecc05fbc0d72b4cd4ed721"
+    }
+  }
+}

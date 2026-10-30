@@ -301,8 +301,28 @@ def test_report_rejects_duplicate_seeds_and_mixed_protocols(pipeline):
     rid = ctx.identity("select", 1)["run_id"]
     rows = report.load_results(ctx, [], [rid, ctx.identity("select", 2)["run_id"]])
     assert [r["seed"] for r in rows] == [1, 2]
+    assert [r["n_folds"] for r in rows] == [TINY["oof"]["n_folds"]] * 2
     with pytest.raises(ValueError, match="ganda"):
         report.load_results(ctx, [], [rid, rid])
+
+
+def test_report_rejects_mixed_oof_protocols(pipeline):
+    """REV-006: hash select & full tidak mencakup config OOF; laporan harus memeriksa run oof."""
+    pytest.importorskip("reportlab")
+    pytest.importorskip("matplotlib")
+    report = load_script("laporan_sementara")
+    ctx, dev_ctx, _ = pipeline
+    changed = json.loads(json.dumps(TINY))
+    changed["oof"]["n_folds"] = 2
+    dev2 = replace(dev_ctx, cfg=ExperimentConfig.from_dict(changed))
+    assert dev2.identity("full", 2)["run_id"] == ctx.identity("full", 2)["run_id"]
+    stage_oof(dev2, 2)
+    stage_select(dev2, 2)
+    rid1 = ctx.identity("select", 1)["run_id"]
+    rid2 = dev2.identity("select", 2)["run_id"]
+    assert dev2.identity("select", 2)["config_sha256"] == ctx.identity("select", 1)["config_sha256"]
+    with pytest.raises(ValueError, match="'oof'"):
+        report.load_results(ctx, [], [rid1, rid2])
 
 
 def test_feature_builder_resumes_from_finished_outputs(tmp_path, monkeypatch):
@@ -330,3 +350,51 @@ def test_feature_builder_resumes_from_finished_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, "argv", ["x", "--zip", "unused.zip", "--out", str(out)])
     builder.main()
     assert not list(out.glob(".*.tmp"))
+
+
+def test_feature_builder_resume_keeps_text_inputs_identical(tmp_path, monkeypatch):
+    """REV-010: build yang terputus sebelum encode teks lalu dilanjutkan memberi input encoder
+    yang sama persis dengan build tanpa jeda (teks 'NA'/'N/A'/'None'/'007' tidak berubah)."""
+    pytest.importorskip("requests")
+    import zipfile
+
+    builder = load_script("build_full_features")
+    reviews = [
+        {"rating": 5, "title": "NA", "text": "N/A", "timestamp": 0},
+        {"rating": 1, "title": "None", "text": "", "timestamp": 1},
+        {"rating": 4, "title": "007", "text": "null", "timestamp": 2},
+        {"rating": 2, "title": "", "text": 'line\nbreak, "quoted"', "timestamp": 3},
+    ]
+    zip_path = tmp_path / "src.zip"
+    with zipfile.ZipFile(zip_path, "w") as zf:
+        lines = [
+            json.dumps({**r, "images": [{"small_image_url": f"u{i}"}]})
+            for i, r in enumerate(reviews)
+        ]
+        zf.writestr("raw/Appliances.jsonl", "\n".join(lines) + "\n")
+
+    def run(out: Path, fail_text: bool) -> dict[str, list[str]]:
+        seen: dict[str, list[str]] = {}
+
+        def encode_texts(texts, device):
+            if fail_text:
+                raise KeyboardInterrupt
+            seen[f"call{len(seen)}"] = list(texts)
+            return np.zeros((len(texts), 768), dtype=np.float32)
+
+        monkeypatch.setattr(builder, "download_images", lambda urls, d, w: {"ok": len(urls)})
+        monkeypatch.setattr(
+            builder, "encode_images", lambda n, d, dev, b: np.zeros((n, 768), np.float32)
+        )
+        monkeypatch.setattr(builder, "encode_texts", encode_texts)
+        monkeypatch.setattr(sys, "argv", ["x", "--zip", str(zip_path), "--out", str(out)])
+        builder.main()
+        return seen
+
+    fresh = run(tmp_path / "fresh", fail_text=False)
+    with pytest.raises(KeyboardInterrupt):
+        run(tmp_path / "resumed", fail_text=True)
+    resumed = run(tmp_path / "resumed", fail_text=False)
+    assert fresh == resumed
+    assert fresh["call0"] == [r["title"] for r in reviews]
+    assert fresh["call1"] == [r["text"] for r in reviews]

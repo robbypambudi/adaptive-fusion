@@ -59,6 +59,20 @@ def read_image_reviews(zip_path: Path) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def read_reviews_csv(path: Path) -> pd.DataFrame:
+    """Baca ulang ``appliances.csv`` (saat dilanjutkan) tanpa mengubah teks (REV-010).
+
+    Default pandas mengubah teks seperti ``NA``/``N/A``/``None`` menjadi NaN dan bisa mem-parse
+    angka; di sini ``title``/``text`` dibaca apa adanya sebagai string, sama seperti build baru.
+    """
+    return pd.read_csv(path, index_col=0, keep_default_na=False, dtype={"title": str, "text": str})
+
+
+def text_inputs(subset: pd.DataFrame, col: str) -> list[str]:
+    """Input encoder teks; dipakai sama persis oleh build baru dan build yang dilanjutkan."""
+    return subset[col].astype(str).tolist()
+
+
 def download_images(urls: list[str | None], image_dir: Path, workers: int) -> dict[str, int]:
     """Unduh paralel ke ``images/<baris>.jpg``; file yang sudah ada dilewati (bisa dilanjutkan)."""
     image_dir.mkdir(parents=True, exist_ok=True)
@@ -176,7 +190,7 @@ def main() -> None:
     # ada dipakai ulang dan tidak pernah ditimpa.
     csv_path, url_path = out / "appliances.csv", out / "first_image_urls.json"
     if csv_path.exists() and url_path.exists():
-        subset = pd.read_csv(csv_path, index_col=0)
+        subset = read_reviews_csv(csv_path)
         print(f"CSV sudah ada: {len(subset)} baris")
     else:
         subset = read_image_reviews(args.zip)
@@ -210,7 +224,7 @@ def main() -> None:
             print(f"embedding {col} sudah ada")
             continue
         print(f"encode {col} ({TEXT_MODEL})")
-        emb = encode_texts(subset[col].fillna("").astype(str).tolist(), device)
+        emb = encode_texts(text_inputs(subset, col), device)
         write_atomic(path, lambda p, e=emb: save_npy(p, e))
 
     valid = np.isfinite(image_emb).all(axis=1)

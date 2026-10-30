@@ -221,3 +221,32 @@ All four accepted and fixed by the host (Claude):
 **Inspection budget exhausted (MAX_INSPECTION_ROUNDS = 2).** The REV-006..009 fixes have NOT been independently inspected. Decision on an extra inspection round is left to the user.
 - **Extra inspection round 3:** approved by the user (2026-10-29) beyond MAX_INSPECTION_ROUNDS.
 - **Inspection 3 attempt 1: FAILED (not approval).** Codex exited after 53.5s with "You've hit your usage limit ... try again at 1:18 PM". Diagnostics: `.../scratchpad/claudex/inspect3/claudex-b7zpo6qv/`. Will retry after the limit resets; dev stages (no test access) re-run meanwhile because the code fingerprint changed.
+- **Dev re-run with fixed code (2026-10-29):** T3–T6 re-run on both datasets with new run ids. Outputs reproduced bit-identically versus the pre-fix runs (zip 12/12, full 27/27: checkpoints, OOF confidences, featurizers, routers by hash; JSON content equal apart from run ids). Full runs: full 47c90b5abb7c/0d95e379dbc1/bdfcb517910c, oof 0b3355efc132/97fc4398a29b/45007a2c3290, select 11b48e13ac02/68a734194d12/4704ebc9a41f.
+- **Inspection 3 attempt 2: FAILED (not approval).** Codex rejected the prompt: 1,354,211 chars > 1,048,576 limit (notebook 453K, two PDFs 210K each, zip selection JSONs 57K each).
+- **Inspection 3 attempt 3 (base workaround):** `--base eef823f7f7c30646839199821c2df0b53349a1f8`, a dangling commit object (`git commit-tree`, no branch/HEAD/index change) = `6012ae10` + six non-code artifacts copied byte-for-byte from the working tree (`adaptive_fusion new.ipynb`, both PDFs, `results/appliances_zip1000/*/router_selection/seed4{2,3,4}.json`). All code/tests/configs/docs remain in the diff; a host note explaining the base was passed via `--feedback`. Codex connectors disabled during the run; `~/.codex/config.toml` restored (SHA `30075e0d…` verified).
+
+### Inspection 3 — Codex (fresh session) — verdict: REVISE
+- Summary: The plan hash matches. Scalar-width validation and persistent locking address REV-008/009. Reporting compatibility remains incomplete, and resumed feature builds can change encoder inputs.
+
+- **REV-006** (medium, reopened) `scripts/laporan_sementara.py:62`
+  - Evidence: The report compares only Full and selection config hashes; `stage_config()` excludes OOF settings from both, so seeds produced with different `n_folds`/`inner_val_size` pass. The report also unconditionally describes five-fold training.
+  - Fix: Verify each selection run's upstream OOF manifest, compare its config hash across seeds, derive the fold description from producer metadata; add coverage for mixed OOF protocols.
+- **REV-010** (medium) `scripts/build_full_features.py:179`
+  - Evidence: Resumed builds reload the CSV with default pandas NA parsing then `fillna('')`; literal 'NA'/'N/A' text (e.g. rows 3861, 6361) becomes '' on resume, giving different embeddings from an uninterrupted build.
+  - Fix: Identical, lossless text loading for fresh and resumed builds; interrupted-build regression.
+- **REV-011** (low) `scripts/laporan_sementara.py:216` — permutation legend hardcodes "20x". Fix: use stored count.
+- **REV-012** (low) `reports/*/laporan_sementara_gmm_router.pdf` — PDFs cite selection runs that no longer exist. Fix: regenerate from retained runs.
+
+#### Coverage / limitations (Codex)
+- Verified plan SHA256; inspected all changed files; traced data prep, fusion contracts, training, OOF isolation, GMM, permutation selection, T7, summary/report; inspected artifact writers, verification, locking, feature-build recovery; all 42 result JSONs read and 60 referenced artifacts hash-matched; figures and PDF text compared with stored artifacts.
+- Static review only; binaries hash-checked not replayed; no T7 artifacts present; PDF layout not rendered.
+
+#### Host dispositions (inspection 3)
+All four accepted and fixed by the host (Claude); all changes are in `scripts/` (outside the package code fingerprint, so pipeline run ids and results are unchanged):
+- REV-006: `load_results` loads and hash-verifies the upstream `oof` run of every select run, requires one `config_sha256` per stage (select, oof, full) across seeds, checks oof→full lineage, and reads `n_folds` from the producer's `confidences.npz` (`fold_of`) for the PDF text. Test `test_report_rejects_mixed_oof_protocols`.
+- REV-010: `read_reviews_csv` (`keep_default_na=False`, `title`/`text` as str) and shared `text_inputs`. Test `test_feature_builder_resume_keeps_text_inputs_identical` (interrupt before text encoding, resume, compare encoder inputs). Real-data impact check: the actual full build encoded text in one uninterrupted run, so it was unaffected — the 8 NA-like rows (6 titles, 2 texts) have stored embeddings with cosine 1.0000 to the literal strings (≈0.60 to ''); `read_reviews_csv` returns all 84,949 title/text strings identical to a fresh zip read.
+- REV-011: legend uses stored `n_permutations`, with a length check on `null_scores`.
+- REV-012: both PDFs regenerated; they cite zip 30238143d404/ceb6172553a0/ac471a326ab1 and full 11b48e13ac02/68a734194d12/4704ebc9a41f.
+- Proof (host-run): the 3 changed tests fail on HEAD scripts and pass with the fixes; `make lint` clean; `make test` 74 passed.
+- Internal `reviewer` subagent on the round-3 fixes: OK, two minor points, both applied: (1) report also checks lineage by content hash (select's `confidences` input = oof output; select checkpoints = full checkpoints via `_same_checkpoints`); (2) `ruff format` on the new code. Not applied (needs team approval, changes the package fingerprint and every run_id): `load_run` asserting `identity.run_id == requested run_id`. Re-proof: `make test` 74 passed, `make lint` clean, both PDFs regenerated.
+- **Status:** inspection 3 verdict was REVISE; the fixes are host-verified but NOT independently inspected by Codex. T7 not run.
